@@ -81,7 +81,7 @@ exports.findOne = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error retrieving Tutorial with id=" + id
+                message: "Error retrieving Student with id=" + id
             });
         });
 };
@@ -143,12 +143,12 @@ exports.deleteAll = (req, res) => {
         truncate: false
     })
         .then(nums => {
-            res.send({ message: `${nums} Students Records deleted successfully!` });
+            res.send({ message: `${nums} Students Record deleted successfully!` });
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while removing all Students Records."
+                    err.message || "Some error occurred while removing all Students Record."
             });
         });
 };
@@ -162,7 +162,7 @@ exports.findAllPublished = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while retrieving Students Records."
+                    err.message || "Some error occurred while retrieving Students Record."
             });
         });
 };
